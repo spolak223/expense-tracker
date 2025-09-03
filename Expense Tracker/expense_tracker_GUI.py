@@ -23,9 +23,6 @@ class ExpenseTrackerApp:
         self.app = app
 
         self.expense_str = "expense tracker save.json"
-        if not os.path.exists(self.expense_str):
-            with open(self.expense_str, "w") as file:
-                json.dump({"my_list" : []}, file, indent=2)
         
         self.tabs = ctk.CTkTabview(master=app,
                                             width=850,

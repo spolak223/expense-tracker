@@ -10,26 +10,21 @@ import datetime as datetime
 
 class Tracker:
     def __init__(self):
-        
         self.T = []
         self.expense_str = "expense_tracker_save.json"
-        if not os.path.exists(self.expense_str):
-            with open(self.expense_str, "w") as file:
-                json.dump({"my_list" : []}, file, indent=2)
-        else:
-            with open(self.expense_str, "r") as file:
-                if os.path.getsize(self.expense_str) > 0:
-                    data = json.load(file)
-                    self.expenses = data['my_list']
-                    if len(data['my_list']) == 0:
-                        self.id = 0
-                    elif len(data['my_list']) == 1:
-                        self.id = data['my_list'][-1]['id']
-                    else:
-                        self.id = data['my_list'][-1]['id']
-                else:
-                    self.expenses = []
+        with open(self.expense_str, "r") as file:
+            if os.path.getsize(self.expense_str) > 0:
+                data = json.load(file)
+                self.expenses = data['my_list']
+                if len(data['my_list']) == 0:
                     self.id = 0
+                elif len(data['my_list']) == 1:
+                    self.id = data['my_list'][-1]['id']
+                else:
+                    self.id = data['my_list'][-1]['id']
+            else:
+                self.expenses = []
+                self.id = 0
         
     
     def new_expense(self, name, amount):

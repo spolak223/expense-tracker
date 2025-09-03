@@ -22,7 +22,7 @@ class ExpenseTrackerApp:
         self.tracker = tracker
         self.app = app
 
-        self.expense_str = "Expense Tracker/expense tracker save.json"
+        self.expense_str = "expense tracker save.json"
         
         self.tabs = ctk.CTkTabview(master=app,
                                             width=850,

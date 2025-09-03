@@ -1,13 +1,9 @@
-
 *
-
 
 !/.gitignore
 
-
 !/Expense Tracker/
 !/Expense Tracker/**
-
 
 Expense Tracker/expense_tracker_save.json
 Expense Tracker/__pycache__/

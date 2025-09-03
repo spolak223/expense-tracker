@@ -1,0 +1,15 @@
+# Ignore everything
+*
+
+# Keep the .gitignore itself
+!/.gitignore
+
+# Unignore the Expense Tracker folder and its contents
+!/Expense Tracker/
+!/Expense Tracker/**
+
+# Re-ignore stuff inside Expense Tracker
+Expense Tracker/expense_tracker_save.json
+Expense Tracker/__pycache__/
+*.pyc
+

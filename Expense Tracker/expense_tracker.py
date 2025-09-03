@@ -12,7 +12,7 @@ class Tracker:
     def __init__(self):
         
         self.T = []
-        self.expense_str = "Expense Tracker/expense_tracker_save.json"
+        self.expense_str = "expense_tracker_save.json"
         with open(self.expense_str, "r") as file:
             if os.path.getsize(self.expense_str) > 0:
                 data = json.load(file)
